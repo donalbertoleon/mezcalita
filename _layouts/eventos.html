@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% for evento in site.eventos %}
+  <h2>
+    <a href="{{ evento.url }}">
+      {{ evento.title }} - {{ evento.fecha }}
+    </a>
+  </h2>
+  <p>{{ evento.content | markdownify }}</p>
+{% endfor %}

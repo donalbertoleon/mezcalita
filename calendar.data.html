@@ -1,0 +1,19 @@
+---
+layout:
+title:
+permalink: /calendar-data/
+---
+
+
+
+[
+{% for evento in site.eventos %}
+	{
+		"title":"{{evento.title}}",
+		"start": "{{evento.fecha}}",
+		"allDay":true,
+		"url":"{{evento.url}}"
+	}
+	{%unless forloop.last %},{%endunless%}
+{% endfor %}
+]
